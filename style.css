@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+#puntos {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+#puntos > div {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(54, 54, 255);
+    animation: puntos 1s ease infinite alternate;
+}
+
+#puntos > div:nth-child(1){
+    animation-delay: 1s;
+}
+
+#puntos > div:nth-child(2){
+    animation-delay: 1.2s;
+}
+
+#puntos > div:nth-child(3){
+    animation-delay: 1.4s;
+}
+
+#puntos > div:nth-child(4){
+    animation-delay: 1.6s;
+}
+
+@keyframes puntos {
+    0% {
+        transform: translateY(0vh);
+        filter: opacity(100%);
+    }
+
+    100% {
+        transform: translateY(20vh);
+        filter: opacity(20%);
+    }
+}
+
+#circulo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border-top: solid 20px violet;
+    border-bottom: solid 20px violet;
+    border-left: solid 20px white;
+    border-right: solid 20px white;
+    margin: auto;
+    animation: circulo 0.7s ease infinite;
+}
+
+@keyframes circulo {
+    0%{
+        rotate: 0deg;
+    }
+
+    100%{
+        rotate: 180deg;
+    }
+}
+
+#empujar {
+    margin: auto;
+    display: flex;
+    width: 50%;
+}
+
+#empujar > div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: plum;
+    border-radius: 100%;
+    left: 5%;
+    scale: 10%;
+    opacity: 0%;
+    animation: empujar 3s ease infinite;
+}
+
+
+#empujar > div:nth-child(2){
+    animation-delay: 1s;
+}
+
+#empujar > div:nth-child(3){
+    animation-delay: 2s;
+}
+
+@keyframes empujar {
+    0% {
+        left: 5%;
+        scale: 30%;
+        opacity: 0%;
+    }
+
+    50% {
+        left: 20%;
+        scale: 100%;
+        opacity: 100%;
+    }
+
+    100% { 
+        left: 35%;
+        scale: 30%;
+        opacity: 0%;
+    }
+}
+
+#cuadrados {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+#cuadrados > div {
+    width: 100px;
+    height: 100px;
+}
+
+#cuadrados > div:nth-child(1){
+    background-color: rgb(47, 155, 47);
+    animation: cuadrados 2s ease-in-out infinite;
+    transform-origin: bottom right;
+}
+
+#cuadrados > div:nth-child(2){
+    background-color: rgb(49, 255, 255);
+    transform-origin: top right;
+    animation: cuadrados 2s ease-in-out infinite reverse;
+    animation-delay: 0.5s;
+}
+
+@keyframes cuadrados {
+   0% {
+        transform: rotateY(0deg);
+   }
+
+   25% {
+        transform: rotateY(180deg);
+   }
+
+   50% {
+        transform: rotateY(180deg) rotateX(180deg);
+   }
+
+   75% {
+        transform: rotateY(0deg) rotateX(180deg);
+   }
+}
